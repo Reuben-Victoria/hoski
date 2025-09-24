@@ -1,0 +1,33 @@
+.logos {
+  padding: 2.5rem 0;
+}
+.logos__list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.logos__item {
+  max-width: 16.0625rem;
+  max-height: 60px;
+  height: auto;
+  margin: 0rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .logos {
+    padding: 4rem 0;
+  }
+  .logos__list {
+    gap: 1.5rem;
+    overflow-x: auto;
+  }
+
+  .logos__item {
+    max-width: 120px;
+    max-height: 40px;
+    margin: 0rem 0.5rem;
+  }
+}

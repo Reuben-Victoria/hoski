@@ -45,20 +45,43 @@
   justify-content: space-between;
   align-items: center;
 }
+.hero__text-content > div {
+  margin-bottom: 5rem;
+}
 .hero__video-container video {
   width: 31.0625rem;
   height: auto;
   border-radius: 1.25rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 1.5rem;
+  }
   .hero__content {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hero__text-content {
+    order: 0;
+    text-align: center;
+  }
+
+  .hero__text-content > div {
+    display: grid;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__video-container {
+    order: 1;
   }
   .hero__video-container video {
     width: 100%;
+    order: 1;
     max-width: 400px;
     height: auto;
   }

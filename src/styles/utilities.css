@@ -68,6 +68,13 @@
   }
 
   .container {
-    padding: 0 1.25rem;
+    padding: 0 12px;
+  }
+
+  .subheader-text {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 30px;
+    letter-spacing: 0%;
   }
 }
