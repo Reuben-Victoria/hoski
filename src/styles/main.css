@@ -1,0 +1,9 @@
+@import 'variables.css';
+@import 'base.css';
+@import 'utilities.css';
+@import 'layout.css';
+@import 'animations.css';
+
+/* Component styles */
+@import '../components/button/button.css';
+@import '../components/navbar/navbar.css';

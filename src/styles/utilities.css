@@ -1,0 +1,56 @@
+.title-xxs {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  line-height: 100%;
+  letter-spacing: 2%;
+  font-weight: 600;
+}
+
+.title-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.title-xs {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  line-height: 100%;
+  letter-spacing: 2%;
+  font-weight: 600;
+}
+
+.title-sm {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  line-height: 3.625rem;
+  font-weight: 600;
+}
+
+/* Medium title */
+.title-md {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  line-height: 4.3125rem;
+  font-weight: 700;
+}
+
+/* Large title */
+.title-lg {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  line-height: 102%;
+  font-weight: 700;
+}
+
+/* Responsive scaling for smaller screens */
+@media (max-width: 768px) {
+  .title-md,
+  .title-lg {
+    font-size: 2rem;
+    line-height: 2.625rem;
+  }
+  .title-sm {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+}

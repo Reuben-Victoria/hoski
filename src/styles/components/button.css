@@ -1,0 +1,39 @@
+.button {
+  width: 17.75rem;         
+  height: 3.5rem;         
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;                
+  padding: 1.5rem;          
+  border-radius: 3.5rem;   
+
+  /* Gradient background */
+  background: linear-gradient(92.94deg, #387CFF 5.87%, #003DB5 92.82%);
+
+  border: 0.0625rem solid; /* 1px */
+  border-image: linear-gradient(108.1deg, #FFFFFF 6.58%, rgba(255, 255, 255, 0) 56.41%) 1;
+  
+
+  color: #fff;
+  font-family: var(--font-base);
+  font-size: 1rem;      
+  font-weight: 600;
+  
+  /* Interaction */
+  cursor: pointer;
+  transition: transform 0.0125rem, opacity 0.2s;
+}
+
+/* Hover effect */
+.button:hover {
+  transform: translateY(-0.125rem); 
+  opacity: 0.9;
+}
+
+
+@media (max-width: 768px) { 
+  .button {
+    width: 100%;
+  }
+}

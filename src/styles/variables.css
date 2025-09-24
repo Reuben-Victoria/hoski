@@ -3,12 +3,12 @@
   --color-primary: #007bff;
   --color-secondary: #6c757d;
   --color-accent: #219653;
-  --color-bg: #ffffff;
-  --color-text: #FFFFFF;
+  --color-bg: #06070A;
+  --color-text: #ffffff;
 
   /* Typography */
-  --font-base: "Inter", sans-serif;
-  --font-heading: "Poppins", sans-serif;
+  --font-base: "DM Sans", sans-serif;
+  --font-heading: "Dela Gothic One", sans-serif;
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
   --font-size-lg: 1.25rem;
@@ -27,4 +27,11 @@
   /* Animation */
   --transition-fast: 0.2s ease-in-out;
   --transition-slow: 0.5s ease-in-out;
+}
+
+h1,
+.dela-gothic-one-regular {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-style: normal;
 }
