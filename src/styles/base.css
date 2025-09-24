@@ -19,12 +19,16 @@ img {
   max-width: 100%;
   display: block;
 }
-
+html, body {
+  height: 100%;
+  width: 100%;
+}
 /* Global typography */
 body {
   font-family: var(--font-base);
   font-size: var(--font-size-md);
   line-height: 1.5;
+  position: relative;
   color: var(--color-text);
   background: var(--color-bg) !important;
 }
@@ -35,7 +39,6 @@ h4,
 h5,
 h6 {
   font-family: var(--font-base);
-  font-weight: bold;
   color: var(--color-text);
 }
 

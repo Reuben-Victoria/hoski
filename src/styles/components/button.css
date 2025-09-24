@@ -1,38 +1,47 @@
 .button {
-  width: 17.75rem;         
-  height: 3.5rem;         
+  position: relative;
   display: flex;
   align-items: center;
+  width: 17.75rem;
+  height: 3.5rem;
   justify-content: center;
-  gap: 1rem;                
-  padding: 1.5rem;          
-  border-radius: 3.5rem;   
-
-  /* Gradient background */
-  background: linear-gradient(92.94deg, #387CFF 5.87%, #003DB5 92.82%);
-
-  border: 0.0625rem solid; /* 1px */
-  border-image: linear-gradient(108.1deg, #FFFFFF 6.58%, rgba(255, 255, 255, 0) 56.41%) 1;
-  
-
+  padding: 1rem 1.5rem;
+  border-radius: 3.5rem;
+  box-sizing: border-box;
+  background: linear-gradient(92.94deg, #387cff 5.87%, #003db5 92.82%);
   color: #fff;
-  font-family: var(--font-base);
-  font-size: 1rem;      
-  font-weight: 600;
-  
-  /* Interaction */
+  font-size: 1.25rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: transform 0.0125rem, opacity 0.2s;
+  z-index: 1;
+  overflow: hidden; 
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  padding: 1.2px; 
+  border-radius: 3.5rem;
+  box-sizing: border-box;
+  background: linear-gradient(
+    108.1deg,
+    #ffffff 6.58%,
+    rgba(255, 255, 255, 0) 56.41%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none; 
 }
 
 /* Hover effect */
 .button:hover {
-  transform: translateY(-0.125rem); 
+  transform: translateY(-0.0125rem);
   opacity: 0.9;
 }
 
-
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .button {
     width: 100%;
   }

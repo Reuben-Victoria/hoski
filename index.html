@@ -27,22 +27,40 @@
   <body>
     <!-- Navbar Component -->
     <header>
-      <!-- You can inline the HTML or include via JS -->
       <div class="navbar">
-        <h1 class="navbar__logo">MyApp</h1>
+        <a href="#" class="navbar__brand">
+          <img
+            class="navbar__logo"
+            src="src/assets/images/logo-white.webp"
+            alt="Logo"
+          />
+        </a>
+
         <nav class="navbar__menu">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="#">About Us</a>
+          <a href="#"
+            ><span>Our Services</span>
+            <img src="src/assets/images/icons/caret-down.webp" alt="Arrow"
+          /></a>
+          <a href="#">Case Studies</a>
+          <a href="#">Contact Us</a>
+          <button class="button">Book a Strategy Call</button>
         </nav>
+        <button  class="navbar__toggle">
+          <img
+           
+            src="src/assets/images/icons/hamburger-menu.webp"
+            alt="Menu"
+          />
+        </button>
       </div>
     </header>
 
     <!-- Main Content -->
     <main class="layout">
-      <!-- Card Component -->
+      <!-- Hero Section -->
       <section>
-        <div class="card fade-in">
+        <div class="card">
           <img
             class="card__image"
             src="src/assets/images/avatar.png"
@@ -57,7 +75,12 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <p>&copy; 2025 MyApp. All rights reserved.</p>
+      <img
+        class="footer__logo"
+        src="src/assets/images/logo-footer.webp"
+        alt="Footer Logo"
+      />
+    </footer>
     </footer>
   </body>
 </html>

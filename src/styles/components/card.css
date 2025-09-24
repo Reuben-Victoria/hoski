@@ -1,0 +1,18 @@
+.card {
+  width: 100%;
+  padding: 1.4375rem 1rem;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  /* Gradient border */
+  border: 0.25rem solid; /* 4px */
+  border-image: linear-gradient(
+      90deg,
+      rgba(0, 39, 114, 0) 0%,
+      #002772 50%,
+      rgba(0, 39, 114, 0) 100%
+    )
+    1;
+  box-sizing: border-box;
+}

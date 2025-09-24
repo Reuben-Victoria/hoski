@@ -5,5 +5,7 @@
 @import 'animations.css';
 
 /* Component styles */
-@import '../components/button/button.css';
-@import '../components/navbar/navbar.css';
+@import './components/button.css';
+@import './components/navbar.css';
+@import './components/footer.css';
+@import './components/card.css';
