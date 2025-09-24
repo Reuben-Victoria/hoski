@@ -1,12 +1,11 @@
 .footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("../../assets/images/logo-footer.webp");
-  background-size: cover;
-  background-position: center;
+  position: relative;
   width: 100%;
   height: fit-content;
-  background-repeat: no-repeat;
+
+}
+
+.footer img {
+  width: 100%;
+  height: auto;
 }

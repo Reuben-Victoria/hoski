@@ -27,7 +27,7 @@
   <body>
     <!-- Navbar Component -->
     <header>
-      <div class="navbar">
+      <div class="navbar container">
         <a href="#" class="navbar__brand">
           <img
             class="navbar__logo"
@@ -38,20 +38,17 @@
 
         <nav class="navbar__menu">
           <a href="#">About Us</a>
-          <a href="#"
-            ><span>Our Services</span>
-            <img src="src/assets/images/icons/caret-down.webp" alt="Arrow"
-          /></a>
+          <a href="#">
+            <span>Our Services</span>
+            <img src="src/assets/images/icons/caret-down.webp" alt="Arrow" />
+          </a>
           <a href="#">Case Studies</a>
           <a href="#">Contact Us</a>
           <button class="button">Book a Strategy Call</button>
         </nav>
-        <button  class="navbar__toggle">
-          <img
-           
-            src="src/assets/images/icons/hamburger-menu.webp"
-            alt="Menu"
-          />
+
+        <button class="navbar__toggle">
+          <img src="src/assets/images/icons/hamburger-menu.webp" alt="Menu" />
         </button>
       </div>
     </header>
@@ -59,16 +56,31 @@
     <!-- Main Content -->
     <main class="layout">
       <!-- Hero Section -->
-      <section>
-        <div class="card">
-          <img
-            class="card__image"
-            src="src/assets/images/avatar.png"
-            alt="Profile"
-          />
-          <h3 class="card__title">John Doe</h3>
-          <p class="card__text">Frontend Engineer</p>
-          <button class="button">Say Hello</button>
+      <section class="hero">
+        <div class="container">
+          <div class="card card__mask">
+            <div class="hero__content">
+              <div class="hero__video-container">
+                <video
+                  src="src/assets/performance-hero.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  class="hero__video"
+                ></video>
+              </div>
+              <div class="hero__text-content">
+                <h1 class="title-md">Let’s Fix Your Leaky Marketing Funnel</h1>
+                <p class="subheader-text">
+                  We’ll sharpen your message, build the right ad strategy, and
+                  set up a system that delivers leads you actually want, without
+                  wasting ad spend.
+                </p>
+                <button class="button">Book A Strategy Call</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -80,7 +92,6 @@
         src="src/assets/images/logo-footer.webp"
         alt="Footer Logo"
       />
-    </footer>
     </footer>
   </body>
 </html>

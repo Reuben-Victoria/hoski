@@ -19,7 +19,8 @@ img {
   max-width: 100%;
   display: block;
 }
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
@@ -43,7 +44,7 @@ h6 {
 }
 
 p {
-  margin-bottom: var(--spacing-md);
+  font-family: "DM Sans", sans-serif;
 }
 
 /* Buttons and inputs */

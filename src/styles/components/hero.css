@@ -1,0 +1,65 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/images/hero-bg.webp") center/cover no-repeat;
+  padding-top: 2.5rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: linear-gradient(
+      180deg,
+      #000510 0%,
+      rgba(0, 6, 22, 0.5) 62%,
+      #000718 100%
+    ),
+    radial-gradient(
+      66.57% 177.51% at 55% 0%,
+      #0e0e0f 0%,
+      rgba(14, 14, 15, 0) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 13, 45, 0) 70%, rgba(0, 13, 45, 0.05) 100%),
+    radial-gradient(
+      62.5% 166.67% at 50% 100%,
+      rgba(0, 13, 45, 0.24) 0%,
+      rgba(0, 13, 45, 0) 63%
+    ),
+    linear-gradient(180deg, #0a0a0b 0%, rgba(10, 10, 11, 0) 49%);
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2; /* make content appear above overlay */
+}
+
+.card__mask {
+}
+.hero__content {
+  display: flex;
+  flex-direction: row;
+  gap: 2.25rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__video-container video {
+  width: 31.0625rem;
+  height: auto;
+  border-radius: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .hero__content {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero__video-container video {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}

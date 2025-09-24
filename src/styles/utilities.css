@@ -3,7 +3,7 @@
   font-size: 1.75rem;
   line-height: 100%;
   letter-spacing: 2%;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .title-base {
@@ -16,14 +16,14 @@
   font-size: 1.75rem;
   line-height: 100%;
   letter-spacing: 2%;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .title-sm {
   font-family: var(--font-heading);
   font-size: 3rem;
   line-height: 3.625rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* Medium title */
@@ -31,7 +31,7 @@
   font-family: var(--font-heading);
   font-size: 3.5rem;
   line-height: 4.3125rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* Large title */
@@ -39,7 +39,20 @@
   font-family: var(--font-heading);
   font-size: 4.5rem;
   line-height: 102%;
-  font-weight: 700;
+  font-weight: 400;
+}
+
+.subheader-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Responsive scaling for smaller screens */
@@ -52,5 +65,9 @@
   .title-sm {
     font-size: 1.125rem;
     line-height: 1.4;
+  }
+
+  .container {
+    padding: 0 1.25rem;
   }
 }
