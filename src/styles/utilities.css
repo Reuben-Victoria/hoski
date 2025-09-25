@@ -1,7 +1,7 @@
 .title-xxs {
   font-family: var(--font-heading);
   font-size: 2rem;
-  line-height: 100%;
+  line-height: 2.5rem;
   letter-spacing: 2%;
   font-weight: 400;
 }
@@ -65,6 +65,45 @@
   margin: auto;
 }
 
+/* Reusable gradient-border component */
+.gradient-border {
+  position: relative;
+  border-radius: var(--border-radius, 1rem); /* default radius */
+  background: var(--bg, transparent);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: var(--border-width, 1px); /* thickness of border */
+  border-radius: inherit;
+
+  /* Gradient border */
+  background: var(
+    --border-gradient,
+    linear-gradient(
+      153.06deg,
+      rgba(0, 86, 255, 0.6) 0.81%,
+      rgba(13, 88, 235, 0) 32.76%,
+      rgba(13, 88, 235, 0) 68.53%,
+      rgba(0, 86, 255, 0.6) 100%
+    )
+  );
+
+  /* Mask to show only border */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
 /* Responsive scaling for smaller screens */
 @media (max-width: 768px) {
   .title-md,
@@ -73,8 +112,8 @@
     line-height: 2.625rem;
   }
   .title-sm {
-    font-size: 1.125rem;
-    line-height: 1.4;
+    line-height: 2.75rem;
+    font-size: 2rem;
   }
 
   .body-text {

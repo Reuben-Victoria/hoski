@@ -1,7 +1,6 @@
 .card {
   width: 100%;
   padding: 1.4375rem 1rem;
-  border: 0.25px solid #fff;
   border-radius: 1.25rem;
   display: flex;
   flex-direction: column;

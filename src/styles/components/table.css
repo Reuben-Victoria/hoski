@@ -1,0 +1,80 @@
+.process-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.process-row {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1fr;
+  align-items: center;
+  border-radius: none;
+  border-bottom: 1px solid #0056ff;
+  gap: 40px;
+}
+
+.process-row:last-child {
+  border-bottom: none;
+}
+
+.step-number {
+  font-size: 8.75rem;
+  font-weight: 900;
+  opacity: 20%;
+  font-family: "Athiti", sans-serif;
+  background: linear-gradient(180deg, #0056ff 0%, #4773c9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 100%;
+}
+
+.step-title {
+  font-size: 1.75rem;
+  font-family: "Dela Gothic One";
+  font-weight: 400;
+  line-height: 1.2;
+  color: white;
+  margin: 0;
+}
+
+.step-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .step-title {
+    font-size: 1.125rem;
+  }
+  .process-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 1.25rem 1rem;
+    text-align: left;
+  }
+
+  .step-number {
+    font-size: 4.3125rem;
+    margin-right: 0;
+  }
+
+  .step-content {
+    padding-left: 0;
+  }
+}
+
+/* Hover effects for desktop */
+@media (min-width: 769px) {
+  .process-row {
+    padding: 40px 20px;
+  }
+
+  .process-row:hover .step-number {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

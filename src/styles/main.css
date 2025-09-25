@@ -1,14 +1,15 @@
-@import 'variables.css';
-@import 'base.css';
-@import 'utilities.css';
-@import 'layout.css';
-@import 'animations.css';
+@import "variables.css";
+@import "base.css";
+@import "utilities.css";
+@import "layout.css";
+@import "animations.css";
 
 /* Component styles */
-@import './components/button.css';
-@import './components/navbar.css';
-@import './components/footer.css';
-@import './components/card.css';
-@import './components/hero.css';
-@import './components/logos.css';
-@import './components/industry.css';
+@import "./components/button.css";
+@import "./components/navbar.css";
+@import "./components/footer.css";
+@import "./components/card.css";
+@import "./components/hero.css";
+@import "./components/logos.css";
+@import "./components/industry.css";
+@import "./components/table.css";

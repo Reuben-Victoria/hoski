@@ -53,8 +53,7 @@
   padding: 0.0725rem;
   background: linear-gradient(
     153.06deg,
-    rgba(40, 106, 234, 1)
-   rgba(14, 14, 15, 0) 32.76%,
+    rgba(40, 106, 234, 1) rgba(14, 14, 15, 0) 32.76%,
     rgba(13, 88, 235, 0) 68.53%,
     rgba(0, 86, 255, 0.6) 100%
   );
@@ -108,7 +107,7 @@
   align-items: flex-end;
   justify-content: flex-end;
   height: auto;
-  border-width: 0.625rem 0 0 0.625rem; /* top + left only */
+  border-width: 0.625rem 0 0 0.625rem;
   border-color: rgba(75, 136, 255, 0.5);
   border-top-left-radius: 1rem;
 }
@@ -120,14 +119,68 @@
 }
 
 /* Approach Section  */
+.approach__left-content {
+  display: flex;
+  order: 0;
+  flex: 1;
+  max-width: 38.1875rem;
+  flex-direction: column;
+  gap: 2rem;
+}
 .approach {
   padding: 6.375rem 1rem 2.5rem;
 }
 
 .approach__content {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   gap: 2rem;
   align-items: flex-start;
+}
+
+.approach__video-card {
+  padding: 0.625rem;
+  order: 1;
+}
+
+.approach__video-container {
+  max-width: 30.25rem;
+  width: 100%;
+  border-radius: 1.25rem;
+  height: auto;
+}
+.approach__video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+}
+
+.approach__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.approach button {
+  margin: 0 auto;
+}
+.approach__item {
+  background: radial-gradient(
+      ellipse 800px 200px at top,
+      rgba(30, 58, 95, 0.8) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 800px 200px at bottom,
+      rgba(30, 58, 95, 0.8) 0%,
+      transparent 50%
+    ),
+    #0f1419;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: start;
 }
 
 /* Services Section */
@@ -152,6 +205,8 @@
   border-radius: 50%;
   background-color: var(--color-primary);
 }
+
+/* Scaling Business */
 
 .scaling-business {
   padding: 3.5rem 0rem 4.5rem;
@@ -209,7 +264,77 @@
   height: 1.75rem;
 }
 
+/* Smart */
+.smart {
+  border-radius: none;
+  padding: 3.5rem 0px;
+  background: radial-gradient(
+      ellipse 800px 500px at top,
+      rgba(30, 58, 95, 0.8) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 800px 500px at bottom,
+      rgba(30, 58, 95, 0.8) 0%,
+      transparent 70%
+    ),
+    #0f1419;
+}
+.smart__text {
+  text-align: center;
+}
+.smart__text > h1 {
+  margin-bottom: 0.5rem;
+}
 @media (max-width: 768px) {
+  .smart {
+    padding: 1.75rem 0px;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .smart__text > h1 {
+    line-height: 2.75rem;
+    font-size: 2rem;
+  }
+  .approach {
+    padding: 4.5rem 0rem 2.5rem;
+  }
+
+  .approach__list {
+    gap: 1rem;
+  }
+
+  .approach__content {
+    gap: 1rem;
+  }
+
+  .approach__text {
+    text-align: center;
+  }
+
+  .approach__item {
+    padding: 2rem;
+  }
+  .approach__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+  }
+  .approach__left-content {
+    flex: 1;
+    max-width: 100%;
+  }
+  .approach__video-card {
+    padding: 0.5rem;
+  }
+
+  .approach__video-container {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 1.25rem;
+    height: auto;
+  }
   .scaling-business__list {
     display: flex;
     flex-direction: column;
@@ -218,7 +343,7 @@
   }
 
   .scaling-business {
-    padding: 2.25rem 0.75rem 2.5rem;
+    padding: 2.25rem 0rem 2.5rem;
   }
   .scaling-business__text h4 {
     font-size: 2.25rem;

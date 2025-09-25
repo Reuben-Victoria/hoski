@@ -67,58 +67,85 @@
 }
 
 .social-link {
+  position: relative; /* needed for ::before */
   width: 5.41rem;
   height: 5.41rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1.45rem;
-  border-radius: 0.77rem;
   padding: 1.22rem;
-
+  border-radius: 0.77rem;
   background: linear-gradient(
     180deg,
     rgba(40, 106, 234, 0.05) 0%,
     rgba(23, 87, 212, 0.05) 100%
   );
+  overflow: hidden;
+}
+
+
+.social-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.08rem; /* border thickness */
+  border-radius: 0.77rem;
 
   /* Gradient border */
-  border: 0.08rem solid;
-  border-image-source: linear-gradient(
+  background: linear-gradient(
     153.06deg,
     rgba(0, 86, 255, 0.6) 0.81%,
     rgba(13, 88, 235, 0) 32.76%,
     rgba(13, 88, 235, 0) 68.53%,
     rgba(0, 86, 255, 0.6) 100%
   );
-  border-image-slice: 1;
+
+  /* Mask to leave only the border visible */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
 }
 
 .footer-right__content {
+  position: relative;
   border-radius: 1.5rem;
-  padding: 2rem 1.5rem; 
-  border-width: 1px;
-  border-style: solid;
-
-  /* Background gradient */
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
   background: linear-gradient(
     180deg,
     rgba(40, 106, 234, 0.1) 0%,
     rgba(23, 87, 212, 0.1) 100%
   );
+  overflow: hidden;
+}
+
+.footer-right__content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: 1.5rem;
 
   /* Gradient border */
-  border-image-source: linear-gradient(
+  background: linear-gradient(
     153.06deg,
     rgba(0, 86, 255, 0.6) 0.81%,
     rgba(13, 88, 235, 0) 32.76%,
     rgba(13, 88, 235, 0) 68.53%,
     rgba(0, 86, 255, 0.6) 100%
   );
-  border-image-slice: 1;
 
-  /* Optional for spacing between children */
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
+  /* Mask to keep only the border visible */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
 }
 
 .footer-column__container {
@@ -189,22 +216,39 @@
   margin-right: 0.75rem;
   place-content: center;
   border-radius: 50%;
+  position: relative; /* Needed for ::before */
 
+  /* Background fill */
   background: linear-gradient(
     180deg,
     rgba(40, 106, 234, 0.1) 0%,
     rgba(23, 87, 212, 0.1) 100%
   );
+  overflow: hidden;
+}
 
-  border: 1px solid;
-  border-image-source: linear-gradient(
+.contact-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: 50%;
+
+  /* Gradient border */
+  background: linear-gradient(
     153.06deg,
     rgba(0, 86, 255, 0.6) 0.81%,
     rgba(13, 88, 235, 0) 32.76%,
     rgba(13, 88, 235, 0) 68.53%,
     rgba(0, 86, 255, 0.6) 100%
   );
-  border-image-slice: 1;
+
+  /* Mask to keep border only */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none; /* so it doesn’t block clicks */
 }
 
 .contact-icon img {
@@ -258,8 +302,8 @@
     font-size: 18px;
   }
 
-  .footer-right__content{
-    padding: 1.5rem 1rem;
+  .footer-right__content {
+    padding: 1.5rem 0rem;
     gap: 2rem;
   }
 

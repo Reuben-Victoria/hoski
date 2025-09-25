@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  background: url("../../assets/images/hero-bg.webp") center/cover no-repeat;
+  background: url("../../assets/images/hero-bg.webp") ;
   padding-top: 2.5rem;
 }
 
@@ -36,8 +36,7 @@
   z-index: 2; /* make content appear above overlay */
 }
 
-.card__mask {
-}
+
 .hero__content {
   display: flex;
   flex-direction: row;
