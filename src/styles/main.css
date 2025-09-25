@@ -1,8 +1,6 @@
 @import "variables.css";
 @import "base.css";
 @import "utilities.css";
-@import "layout.css";
-@import "animations.css";
 
 /* Component styles */
 @import "./components/button.css";
