@@ -570,6 +570,10 @@
   .explore {
     padding: 3.5rem 0 0;
   }
+  .explore__content > div {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
   .faqs__content {
     display: flex;
     align-items: center;

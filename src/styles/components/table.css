@@ -9,7 +9,7 @@
   grid-template-columns: 0.7fr 1fr 1fr;
   align-items: center;
   border-radius: none;
-  border-bottom: 1px solid #0056ff;
+  border-bottom: 1px solid rgb(1, 18, 61);
   gap: 40px;
 }
 
