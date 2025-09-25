@@ -483,6 +483,8 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* FAQs */
+
 .faqs__content {
   display: flex;
   align-items: start;
@@ -542,7 +544,32 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* Explore */
+
+.explore {
+  padding: 4.5rem 0;
+}
+.explore__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-direction: column;
+}
+
+.explore__content > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 4rem;
+  flex-direction: row;
+}
+
 @media (max-width: 768px) {
+  .explore {
+    padding: 3.5rem 0 0;
+  }
   .faqs__content {
     display: flex;
     align-items: center;
