@@ -73,6 +73,20 @@
     line-height: 1.4;
   }
 
+  .body-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0%;
+  }
+  .title-xs {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    line-height: 100%;
+    letter-spacing: 2%;
+    font-weight: 400;
+  }
+
   .container {
     padding: 0 12px;
   }
