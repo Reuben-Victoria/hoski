@@ -286,7 +286,147 @@
 .smart__text > h1 {
   margin-bottom: 0.5rem;
 }
+
+/* Comparisons */
+
+.comparison-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  border-collapse: collapse;
+}
+
+.column:last-child {
+  border-right: none;
+}
+
+.header {
+  padding: 2rem 0rem 1.125rem;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Dela Gothic One", "sans-serif";
+  position: relative;
+}
+
+.needs-column {
+  color: #e2e8f0;
+}
+
+.hoski-column {
+  background: var(--color-primary);
+  color: white;
+  display: grid;
+  place-content: center;
+}
+
+.hoski-column img {
+  width: 6.25rem;
+  height: auto;
+}
+
+.agency-column {
+  color: #e2e8f0;
+}
+
+.freelancer-column {
+  color: #e2e8f0;
+}
+
+.diy-column {
+  color: #e2e8f0;
+}
+
+.other-column {
+  color: #e2e8f0;
+  display: none;
+}
+
+.row {
+  display: contents;
+}
+
+.cell {
+  padding: 1.125rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.needs-cell {
+  background: rgba(30, 41, 59, 0.4);
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.hoski-cell {
+  background: var(--color-primary);
+  color: #e2e8f0;
+}
+.other-cell {
+  display: none;
+}
+.agency-cell,
+.freelancer-cell,
+.diy-cell {
+  background: rgba(15, 20, 25, 0.6);
+  color: #94a3b8;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
 @media (max-width: 768px) {
+  .comparison-table {
+    grid-template-columns: 2fr 0.8fr 0.8fr;
+  }
+
+  .hoski-cell > p {
+    display: none;
+  }
+
+  .other-cell {
+    display: block;
+  }
+
+  .needs-column {
+    text-align: left;
+  }
+
+  .agency-column,
+  .freelancer-column,
+  .diy-column {
+    display: none;
+  }
+  .agency-cell,
+  .freelancer-cell,
+  .diy-cell {
+    display: none;
+  }
+
+  .other-column {
+    display: block;
+  }
+  .column {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .header {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .cell {
+    padding: 15px 20px;
+    min-height: 60px;
+  }
   .smart {
     padding: 1.75rem 0px;
     border-radius: 1rem 1rem 0 0;

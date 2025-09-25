@@ -64,6 +64,39 @@
   overflow-y: hidden;
   margin: auto;
 }
+::-webkit-scrollbar {
+  height: 4px !important;
+  width: 4px !important;
+  border-radius: 8px !important;
+  background-color: transparent !important;
+}
+
+::-webkit-scrollbar-button {
+  display: none !important;
+}
+
+::-webkit-scrollbar-track {
+  width: 4px !important;
+  border-radius: 8px !important;
+}
+
+::-webkit-scrollbar-track-piece {
+  width: 4px !important;
+  border-radius: 8px !important;
+}
+::-webkit-scrollbar-thumb {
+  width: 4px !important;
+  border-radius: 8px !important;
+  background-color: var(--color-bg);
+}
+
+::-webkit-scrollbar-corner {
+  display: none !important;
+}
+
+::-webkit-resizer {
+  display: none !important;
+}
 
 /* Reusable gradient-border component */
 .gradient-border {
@@ -75,7 +108,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .gradient-border::before {
   content: "";
