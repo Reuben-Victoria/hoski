@@ -1,0 +1,21 @@
+.industry {
+  padding: 1.5rem auto;
+  background-color: linear-gradient(
+      180deg,
+      #000510 0%,
+      rgba(0, 6, 22, 0.5) 62%,
+      #000718 100%
+    ),
+    radial-gradient(
+      66.57% 177.51% at 55% 0%,
+      #0e0e0f 0%,
+      rgba(14, 14, 15, 0) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 13, 45, 0) 70%, rgba(0, 13, 45, 0.05) 100%),
+    radial-gradient(
+      62.5% 166.67% at 50% 100%,
+      rgba(0, 13, 45, 0.24) 0%,
+      rgba(0, 13, 45, 0) 63%
+    ),
+    linear-gradient(180deg, #0a0a0b 0%, rgba(10, 10, 11, 0) 49%);
+}
