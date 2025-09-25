@@ -9,6 +9,8 @@
 .title-base {
   font-size: 1rem;
   line-height: 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 400;
 }
 
 .title-xs {
@@ -101,7 +103,7 @@
 /* Reusable gradient-border component */
 .gradient-border {
   position: relative;
-  border-radius: var(--border-radius, 1rem); /* default radius */
+  border-radius: var(--border-radius, 1rem);
   background: var(--bg, transparent);
   overflow: hidden;
   display: flex;
@@ -113,7 +115,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  padding: var(--border-width, 1px); /* thickness of border */
+  padding: var(--border-width, 1px);
   border-radius: inherit;
 
   /* Gradient border */
@@ -142,6 +144,9 @@
   .title-lg {
     font-size: 2rem;
     line-height: 2.625rem;
+  }
+  .gradient-border {
+    width: fit-content;
   }
   .title-sm {
     line-height: 2.75rem;
