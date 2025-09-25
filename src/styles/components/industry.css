@@ -1,10 +1,12 @@
 .industry__list {
-  display: grid;
-
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  justify-content: center;
   overflow-x: auto;
   gap: 2rem;
-  align-items: start;
+  align-items: center;
 }
 
 .industry h1:nth-of-type(1) {
@@ -136,6 +138,7 @@
   gap: 2rem;
   padding: 4.5rem 0;
   text-wrap: nowrap;
+  flex: 0 0 auto;
   white-space: nowrap;
   overflow-x: scroll;
   justify-content: space-between;

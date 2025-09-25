@@ -10,18 +10,40 @@
 }
 
 .footer-container {
-  background: linear-gradient(135deg, #1a2b4a 0%, #0f1419 100%);
-  border-radius: 16px;
   padding: 3.375rem 2.5rem;
   width: 100%;
-  border: 1px solid #2a3b5a;
+  margin-bottom: 4.5rem;
+
+  opacity: 1;
+  border-radius: 32px;
+
+  /* Background gradient */
+  background: linear-gradient(
+    180deg,
+    rgba(40, 106, 234, 0.12) 0%,
+    rgba(23, 87, 212, 0.12) 100%
+  );
+
+  /* Border gradient */
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    153.06deg,
+    rgba(0, 86, 255, 0.6) 0.81%,
+    rgba(13, 88, 235, 0) 32.76%,
+    rgba(13, 88, 235, 0) 68.53%,
+    rgba(0, 86, 255, 0.6) 100%
+  );
+  border-image-slice: 1;
+
+  /* Shadow */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.8fr;
   gap: 60px;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .footer-brand {
@@ -30,16 +52,11 @@
 }
 
 .footer-brand h2 {
-  color: white;
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .footer-brand p {
-  color: #94a3b8;
-  font-size: 16px;
+  font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 24px;
 }
@@ -75,15 +92,40 @@
   border-image-slice: 1;
 }
 
-.social-link:hover {
-  background-color: #3b82f6;
-  transform: translateY(-2px);
+.footer-right__content {
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem; 
+  border-width: 1px;
+  border-style: solid;
+
+  /* Background gradient */
+  background: linear-gradient(
+    180deg,
+    rgba(40, 106, 234, 0.1) 0%,
+    rgba(23, 87, 212, 0.1) 100%
+  );
+
+  /* Gradient border */
+  border-image-source: linear-gradient(
+    153.06deg,
+    rgba(0, 86, 255, 0.6) 0.81%,
+    rgba(13, 88, 235, 0) 32.76%,
+    rgba(13, 88, 235, 0) 68.53%,
+    rgba(0, 86, 255, 0.6) 100%
+  );
+  border-image-slice: 1;
+
+  /* Optional for spacing between children */
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
 }
 
 .footer-column__container {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .footer-column {
@@ -112,9 +154,8 @@
 }
 
 .footer-column a {
-  color: #cbd5e1;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
@@ -126,7 +167,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding-top: 40px;
+  padding-top: 56px;
   border-top: 1px solid #2a3b5a;
 }
 
@@ -142,28 +183,51 @@
 }
 
 .contact-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  margin-right: 0.75rem;
+  place-content: center;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    180deg,
+    rgba(40, 106, 234, 0.1) 0%,
+    rgba(23, 87, 212, 0.1) 100%
+  );
+
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    153.06deg,
+    rgba(0, 86, 255, 0.6) 0.81%,
+    rgba(13, 88, 235, 0) 32.76%,
+    rgba(13, 88, 235, 0) 68.53%,
+    rgba(0, 86, 255, 0.6) 100%
+  );
+  border-image-slice: 1;
+}
+
+.contact-icon img {
   width: 20px;
-  height: 20px;
-  margin-right: 12px;
-  color: #3b82f6;
+  height: auto;
 }
 
 .contact-label {
-  color: #94a3b8;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-family: "Dela Gothic One", sans-serif;
+
   margin-bottom: 4px;
 }
 
 .contact-value {
-  color: #cbd5e1;
-  font-size: 16px;
+  color: rgba(164, 164, 164, 1);
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
   .footer-container {
     padding: 30px 20px;
+    margin-bottom: 2.5rem;
     border-radius: 12px;
   }
 
@@ -179,7 +243,7 @@
   }
 
   .footer-brand p {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 20px;
   }
 
@@ -194,11 +258,18 @@
     font-size: 18px;
   }
 
+  .footer-right__content{
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+  }
+
   .footer-column__container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    justify-content: space-between;
+    gap: 3.5rem;
+    border-radius: 1.5rem;
+    padding: 2rem 1rem;
   }
 
   .footer-column h3 {
@@ -207,7 +278,7 @@
   }
 
   .footer-column a {
-    font-size: 14px;
+    font-size: 1.125rem;
   }
 
   .footer-column li {
@@ -217,7 +288,7 @@
   .footer-bottom {
     grid-template-columns: 1fr;
     gap: 24px;
-    padding-top: 30px;
+    padding-top: 2rem;
   }
 
   .contact-item {
@@ -225,7 +296,7 @@
   }
 
   .contact-label {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .contact-value {

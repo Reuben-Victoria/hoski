@@ -55,10 +55,14 @@
   line-height: 28px;
   letter-spacing: 0%;
 }
+
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0rem 24px;
+  max-width: 1375px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: auto;
 }
 
 /* Responsive scaling for smaller screens */
