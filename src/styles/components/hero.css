@@ -30,6 +30,10 @@
   border-bottom-right-radius: 1.25rem;
   align-items: center;
 }
+
+.hero__text-content > div > h1 {
+  margin-bottom: 1.125rem;
+}
 .hero__text-content > div {
   margin-bottom: 5rem;
 }
