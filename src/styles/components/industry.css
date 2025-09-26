@@ -14,11 +14,17 @@
   text-align: center;
 }
 
+.button-container {
+  display: grid;
+  place-content: center;
+}
+
 .industry {
   padding: 2.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2.5rem;
 
   background: radial-gradient(
@@ -34,6 +40,7 @@
   max-width: 31.75rem;
   display: block;
   min-height: 38.25rem;
+  flex-shrink: 0;
   max-height: 38.25rem;
   width: 100%;
   height: 100%;
@@ -131,6 +138,13 @@
 }
 .approach {
   padding: 6.375rem 1rem 2.5rem;
+  background: 
+    radial-gradient(
+      ellipse 900px 500px at bottom,
+      rgba(0, 39, 114, 0.8) 0%,
+      transparent 50%
+    ),
+    #0f1419;
 }
 
 .approach__content {
@@ -566,6 +580,27 @@
   gap: 1.25rem;
   margin-bottom: 4rem;
   flex-direction: row;
+}
+
+.explore__images {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  gap: 1.125rem;
+}
+
+.explore__images > div {
+  border-radius: 1rem;
+  width: 100%;
+  flex-shrink: 0;
+  max-width: 60.5625rem;
+}
+
+.explore__images > div > img {
+  border-radius: 1rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 768px) {
