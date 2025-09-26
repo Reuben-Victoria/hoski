@@ -15,8 +15,11 @@
 }
 
 .button-container {
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .industry {
@@ -138,8 +141,7 @@
 }
 .approach {
   padding: 6.375rem 1rem 2.5rem;
-  background: 
-    radial-gradient(
+  background: radial-gradient(
       ellipse 900px 500px at bottom,
       rgba(0, 39, 114, 0.8) 0%,
       transparent 50%
