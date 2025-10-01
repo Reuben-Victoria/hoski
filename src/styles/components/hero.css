@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-
+  margin-top: 7.5rem;
   height: auto;
   background: url("../../assets/images/hero-bg.webp");
   padding: 2.5rem 0 2.5rem;
@@ -46,6 +46,7 @@
 @media (max-width: 768px) {
   .hero {
     padding-top: 1.5rem;
+    margin-top: 4.5rem;
   }
   .hero__content {
     flex-direction: column;

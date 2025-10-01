@@ -205,16 +205,38 @@
 
 /* Services Section */
 
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
 .services {
   display: flex;
   align-items: center;
   gap: 2rem;
   padding: 4.5rem 0;
-  text-wrap: nowrap;
-  flex: 0 0 auto;
   white-space: nowrap;
-  overflow-x: scroll;
-  justify-content: space-between;
+  animation: marquee 12s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.marquee:hover .services {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services {
+    animation: none;
+  }
 }
 
 .services > div {

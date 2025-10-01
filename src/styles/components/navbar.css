@@ -1,3 +1,13 @@
+.navbar__container {
+  background-color: var(--color-bg);
+  position: fixed;
+  z-index: 999;
+  background-color: var(--color-bg);
+  inset: 0px 0px auto 0px;
+}
+
+
+
 .navbar {
   padding: 27px 0px;
   display: flex;
