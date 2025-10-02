@@ -6,39 +6,52 @@ export function initApproachAnimation(gsap) {
   const wrapper = section.querySelector(".approach__list-wrapper");
   const videoCard = section.querySelector(".approach__video-card");
 
-  // Check if we're on mobile (viewport width < 768px)
+  if (!section || !heading || !wrapper || !videoCard) return;
+
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  if (isMobile) return;
 
-  if (isMobile) {
-    return; // Exit early on mobile
-  }
+  const wrapperHeight = wrapper.scrollHeight;
+  const sectionHeight = section.offsetHeight;
 
-  // Match section height to video height
-  const videoHeight = videoCard.offsetHeight;
-  section.style.minHeight = videoHeight + "px";
+  // Ensure heading and video card are above the list
+  heading.style.position = "relative";
+  heading.style.background =
+    "linear-gradient(180deg, #0a0a0b 92.63%, rgba(0, 0, 0, 0) 100%)";
+  heading.style.zIndex = 10;
+  heading.style.paddingBottom = "16px";
+  videoCard.style.position = "relative";
+  videoCard.style.zIndex = 5;
 
-  // Pin the heading while list scrolls behind
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top top",
-    end: () => `+=${wrapper.scrollHeight}`,
-    scrub: true,
-    pin: heading,
-    pinSpacing: false,
-  });
-
-  // Animate list items upward under the heading
-  gsap.to(wrapper, {
-    y: () => -(wrapper.scrollHeight - videoHeight + 100),
-    ease: "none",
-    scrollTrigger: {
-      trigger: section,
-      start: "top top",
-      end: () => `+=${wrapper.scrollHeight}`,
-      scrub: true,
-    },
-  });
+  // Build one timeline to sync everything
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: () => `+=${wrapperHeight}`,
+        scrub: true,
+        pin: true,
+      },
+    })
+    .to(
+      wrapper,
+      {
+        y: () => -(wrapperHeight - 200),
+        ease: "none",
+      },
+      0
+    )
+    .to(
+      heading,
+      {
+        y: () => sectionHeight,
+        ease: "none",
+      },
+      0
+    );
 }
+
 export function initSwiper() {
   const swiper = new Swiper(".swiper", {
     slidesPerView: 1,

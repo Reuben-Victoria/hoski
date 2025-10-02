@@ -165,6 +165,8 @@
 .approach__video-card {
   padding: 0.625rem;
   order: 1;
+  z-index: 4;
+  position: relative;
 }
 
 .approach__video-container {
@@ -186,16 +188,18 @@
   gap: 2rem;
 }
 
-.approach__text-outer{
+.approach__text-outer {
   display: none;
 }
 
 .approach__text .approach__text-outer {
-  z-index: 5;
+  z-index: 20;
   padding-bottom: 1rem;
   position: relative;
   background: linear-gradient(180deg, #0a0a0b 92.63%, rgba(0, 0, 0, 0) 100%);
 }
+
+
 
 .approach__list-wrapper {
   height: 0;
@@ -216,7 +220,6 @@
 .approach button {
   margin: 0 auto;
 }
-/* background: linear-gradient(151.26deg, rgba(0, 39, 114, 0.3) 1.12%, rgba(0, 6, 22, 0.3) 50.56%, rgba(0, 39, 114, 0.3) 100%); */
 
 .approach__item {
   background: radial-gradient(
@@ -234,7 +237,7 @@
   display: flex;
   height: max-content;
   align-items: stretch;
-
+  
   flex-direction: column;
   gap: 1.5rem;
   align-items: start;
@@ -1000,7 +1003,7 @@
     margin-bottom: 1.125rem;
   }
 
-   .scaling-business__list p {
+  .scaling-business__list p {
     font-size: 1rem;
     width: 100%;
   }
