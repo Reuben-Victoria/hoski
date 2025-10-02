@@ -38,14 +38,6 @@ export function initApproachAnimation(gsap) {
       },
       0
     )
-    .to(
-      heading,
-      {
-        y: () => wrapperHeight * 0.5,
-        ease: "none",
-      },
-      0
-    );
 }
 export function initSwiper() {
   const swiper = new Swiper(".swiper", {
