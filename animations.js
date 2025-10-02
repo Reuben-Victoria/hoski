@@ -69,20 +69,4 @@ export function initSwiper() {
   return swiper;
 }
 
-// breakpoints: {
-//   640: {
-//     slidesPerView: 1,
-//     grid: { rows: 1, fill: "row" },
-//     slidesPerGroup: 1,
-//   },
-//   768: {
-//     slidesPerView: 2,            // columns per row
-//     grid: { rows: 2, fill: "column" }, // IMPORTANT: fill by column -> empties go to bottom
-//     slidesPerGroup: 4,          // 2 cols * 2 rows = 4 slides per page
-//   },
-//   1024: {
-//     slidesPerView: 3,
-//     grid: { rows: 2, fill: "column" }, // columns-first fill keeps blanks at bottom
-//     slidesPerGroup: 6,          // 3 * 2 = 6 slides per page
-//   },
-// },
+
