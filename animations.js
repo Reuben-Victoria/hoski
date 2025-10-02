@@ -6,6 +6,13 @@ export function initApproachAnimation(gsap) {
   const wrapper = section.querySelector(".approach__list-wrapper");
   const videoCard = section.querySelector(".approach__video-card");
 
+  // Check if we're on mobile (viewport width < 768px)
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+  if (isMobile) {
+    return; // Exit early on mobile
+  }
+
   // Match section height to video height
   const videoHeight = videoCard.offsetHeight;
   section.style.minHeight = videoHeight + "px";
@@ -32,7 +39,6 @@ export function initApproachAnimation(gsap) {
     },
   });
 }
-
 export function initSwiper() {
   const swiper = new Swiper(".swiper", {
     slidesPerView: 1,
@@ -68,5 +74,3 @@ export function initSwiper() {
   });
   return swiper;
 }
-
-
