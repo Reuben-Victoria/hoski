@@ -9,8 +9,25 @@
   grid-template-columns: 0.7fr 1fr 1fr;
   align-items: center;
   border-radius: none;
+  border-right: 1px solid
+    linear-gradient(
+      90deg,
+      rgba(0, 39, 114, 0) 0%,
+      #002772 50%,
+      rgba(0, 39, 114, 0) 100%
+    );
+
   border-bottom: 1px solid rgb(1, 18, 61);
   gap: 40px;
+}
+
+.process-row:last-child {
+  border-right: none;
+}
+.process-row:hover {
+  background-color: var(--color-primary);
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 1rem;
 }
 
 .process-row:last-child {

@@ -7,6 +7,8 @@
   overflow-x: auto;
   gap: 2rem;
   align-items: center;
+  animation: marquee 12s linear infinite;
+  will-change: transform;
 }
 
 .industry h1:nth-of-type(1) {
@@ -344,6 +346,14 @@
     ),
     #06070a;
 }
+
+.smart__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
 .smart__text {
   text-align: center;
 }
@@ -560,16 +570,50 @@
   flex-direction: row;
 }
 
+.faqs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .faqs {
   padding: 4.5rem 0rem;
 }
 
 .faqs-image {
   max-width: 35.625rem;
+  max-height: 51.5rem;
+  padding: 1.5rem;
+  overflow: hidden;
   width: 100%;
   height: auto;
 }
+.marquee-vertical {
+  display: flex;
+  flex-direction: column;
+  height: 200%;
+  animation: scroll 12s linear infinite;
+}
 
+.marquee-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.marquee-vertical img {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  border-radius: 1.125rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
 .faqs__content-text {
   max-width: 38rem;
   width: 100%;
@@ -674,10 +718,16 @@
     padding: 3.5rem 0rem;
   }
 
+  .marquee-vertical {
+    height: fit-content;
+  }
+
   .faqs-image {
     max-width: 100%;
     width: 100%;
+    padding: 0.75rem;
     height: auto;
+    max-height: 30rem;
   }
 
   .faqs__content-text {
@@ -796,6 +846,10 @@
   .smart__text > h1 {
     line-height: 2.75rem;
     font-size: 2rem;
+  }
+
+  .smart__content {
+    gap: 1.125rem;
   }
   .approach {
     padding: 4.5rem 0rem 2.5rem;
