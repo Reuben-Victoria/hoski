@@ -207,8 +207,9 @@
   overflow: visible;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
-  position: relative;
+  z-index: 0;
 }
 
 .approach__text > h4 {
@@ -218,9 +219,6 @@
   line-height: 132%;
 }
 
-.approach button {
-  margin: 0 auto;
-}
 
 .approach__item {
   background: radial-gradient(

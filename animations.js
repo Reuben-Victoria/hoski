@@ -15,14 +15,14 @@ export function initApproachAnimation(gsap) {
 
   // Set up proper layering with solid background
   heading.style.position = "relative";
-  heading.style.background = "#0a0a0b"; // Solid background instead of gradient
+  heading.style.background = "#0a0a0b"; 
   heading.style.zIndex = 10;
   heading.style.paddingBottom = "32px";
   
   videoCard.style.position = "relative";
   videoCard.style.zIndex = 10;
-  videoCard.style.background = "#0a0a0b"; // Add solid background to video card too
-  videoCard.style.paddingTop = "16px"; // Add padding to cover gap
+  videoCard.style.background = "#0a0a0b";
+  videoCard.style.paddingTop = "16px";
   
   wrapper.style.position = "relative";
   wrapper.style.zIndex = 1;
