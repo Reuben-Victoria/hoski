@@ -41,7 +41,7 @@ export function initApproachAnimation(gsap) {
     .to(
       heading,
       {
-        y: () => wrapperHeight * 0.3,
+        y: () => wrapperHeight * 0.5,
         ease: "none",
       },
       0
