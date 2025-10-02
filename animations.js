@@ -12,46 +12,40 @@ export function initApproachAnimation(gsap) {
   if (isMobile) return;
 
   const wrapperHeight = wrapper.scrollHeight;
-  const sectionHeight = section.offsetHeight;
 
-  // Ensure heading and video card are above the list
+  // Set up proper layering with solid background
   heading.style.position = "relative";
-  heading.style.background =
-    "linear-gradient(180deg, #0a0a0b 92.63%, rgba(0, 0, 0, 0) 100%)";
+  heading.style.background = "#0a0a0b"; // Solid background instead of gradient
   heading.style.zIndex = 10;
-  heading.style.paddingBottom = "16px";
+  heading.style.paddingBottom = "32px";
+  
   videoCard.style.position = "relative";
-  videoCard.style.zIndex = 5;
+  videoCard.style.zIndex = 10;
+  videoCard.style.background = "#0a0a0b"; // Add solid background to video card too
+  videoCard.style.paddingTop = "16px"; // Add padding to cover gap
+  
+  wrapper.style.position = "relative";
+  wrapper.style.zIndex = 1;
 
-  // Build one timeline to sync everything
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `+=${wrapperHeight}`,
-        scrub: true,
-        pin: true,
-      },
-    })
-    .to(
-      wrapper,
-      {
-        y: () => -(wrapperHeight - 200),
-        ease: "none",
-      },
-      0
-    )
-    .to(
-      heading,
-      {
-        y: () => sectionHeight,
-        ease: "none",
-      },
-      0
-    );
+  // Create synchronized animation
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "top top",
+      end: () => `+=${wrapperHeight}`,
+      scrub: true,
+      pin: true,
+    },
+  })
+  .to(wrapper, {
+    y: () => -(wrapperHeight - 200),
+    ease: "none",
+  }, 0)
+  .to(heading, {
+    y: () => (wrapperHeight * 0.3),
+    ease: "none",
+  }, 0)
 }
-
 export function initSwiper() {
   const swiper = new Swiper(".swiper", {
     slidesPerView: 1,
