@@ -577,6 +577,50 @@
   flex-direction: row;
 }
 
+.faqs__toggle {
+  display: none;
+}
+
+/* header styling */
+.faqs__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.faqs__header > h3 {
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+/* caret */
+.caret img {
+  width: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faqs__content-info {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  padding: 0 1rem;
+}
+
+.faqs__toggle:checked ~ .faqs__content-info {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.6s ease, opacity 0.4s ease;
+}
+
+.faqs__toggle:checked ~ .faqs__header .caret img {
+  transform: rotate(180deg);
+}
+
 .faqs__list {
   display: flex;
   flex-direction: column;
@@ -595,6 +639,7 @@
   width: 100%;
   height: auto;
 }
+
 .marquee-vertical {
   display: flex;
   flex-direction: column;
@@ -718,6 +763,7 @@
     display: flex;
     align-items: center;
     gap: 4rem;
+    width: 100%;
     flex-direction: column;
   }
 
@@ -743,6 +789,12 @@
 
   .faqs__card {
     padding: 0.75rem;
+  }
+
+  .faqs__header > h3 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
   }
 
   .faqs__card > div:nth-of-type(1) > div {

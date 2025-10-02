@@ -47,28 +47,25 @@
   width: 14.1875rem;
   height: 4rem;
   box-sizing: border-box;
-  color: white;
-
-  /* spacing */
   padding: 0.75rem 1.5rem;
   gap: 0.5rem;
-
-  position: relative;
-  border: none; /* remove border-image */
   border-radius: 3.5rem;
   overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    rgba(40, 106, 234, 0.5) 0%,
-    rgba(23, 87, 212, 0.5) 100%
-  );
+  position: relative;
+
+  color: white;
+  font-weight: normal;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+/* border for inactive state */
 .tab__button::before {
   content: "";
   position: absolute;
   inset: 0;
-  padding: 1px; /* border thickness */
+  padding: 1px;
   border-radius: inherit;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   background: linear-gradient(180deg, #286aea 0%, #1757d4 100%);
@@ -77,6 +74,19 @@
   mask-composite: exclude;
   pointer-events: none;
 }
+
+/* active/hover state */
+.tab__button:hover,
+.tab__button:active {
+  font-weight: bold;
+  background: linear-gradient(
+    180deg,
+    rgba(40, 106, 234, 0.5) 0%,
+    rgba(23, 87, 212, 0.5) 100%
+  );
+}
+
+
 @media (max-width: 768px) {
   .button {
     width: 100%;
