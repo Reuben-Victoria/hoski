@@ -967,6 +967,8 @@
   .approach__left-content {
     flex: 1;
     order: 1;
+    max-height: fit-content;
+    overflow: visible;
     max-width: 100%;
   }
   .approach__video-card {
