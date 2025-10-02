@@ -137,6 +137,7 @@
   display: flex;
   order: 0;
   flex: 1;
+  height: auto;
   max-width: 40.1875rem;
   flex-direction: column;
   gap: 2rem;
@@ -198,18 +199,19 @@
   background: linear-gradient(180deg, #0a0a0b 92.63%, rgba(0, 0, 0, 0) 100%);
 }
 
-.approach__list-clip{
+.approach__list-clip {
   overflow: hidden;
   position: relative;
 }
 
 .approach__list-wrapper {
-  overflow: visible;
+  overflow: hidden;
   display: flex;
+  height: 0;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  z-index: 0;
+  z-index: 2;
 }
 
 .approach__text > h4 {
@@ -218,7 +220,6 @@
   font-weight: 400;
   line-height: 132%;
 }
-
 
 .approach__item {
   background: radial-gradient(
@@ -236,7 +237,7 @@
   display: flex;
   height: max-content;
   align-items: stretch;
-  
+
   flex-direction: column;
   gap: 1.5rem;
   align-items: start;
