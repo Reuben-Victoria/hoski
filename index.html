@@ -428,9 +428,8 @@
               <h2 class="title-lg">What You Get</h2>
             </div>
 
-         <div class="approach__list-clip">
-             <div class="approach__list-wrapper">
-             
+            <div class="approach__list-clip">
+              <div class="approach__list-wrapper">
                 <div class="approach__list">
                   <div class="approach__item gradient-border">
                     <h5 class="title-xxs">Full-Funnel Strategy</h5>
@@ -476,9 +475,8 @@
                   </div>
                 </div>
                 <button class="button">Book a Strategy Call</button>
-              
+              </div>
             </div>
-         </div>
           </div>
           <div class="gradient-border approach__video-card">
             <div class="approach__video-container">
@@ -587,23 +585,53 @@
       </section>
 
       <!-- Explore Section -->
+
       <section class="explore container">
         <div class="explore__content">
           <h2 class="title-sm">Explore Our Works</h2>
           <div>
-            <button class="tab__button">Videos</button>
-            <button class="tab__button">Creative Ads</button>
-            <button class="tab__button">Websites and Landers</button>
+            <button class="tab__button active" data-tab="videos">Videos</button>
+            <button class="tab__button" data-tab="ads">Creative Ads</button>
+            <button class="tab__button" data-tab="websites">
+              Websites and Landers
+            </button>
           </div>
 
-          <div class="explore__images">
+          <div class="tab-content active explore__images" id="videos">
             <div>
               <img src="src/assets/images/image1.webp" alt="image" />
             </div>
             <div>
               <img src="src/assets/images/image2.webp" alt="image" />
             </div>
+            <div>
+              <img src="src/assets/images/image1.webp" alt="image" />
+            </div>
           </div>
+
+          <!-- <div class="tab-content active explore__images" id="ads">
+            <div>
+              <img src="src/assets/images/image1.webp" alt="image" />
+            </div>
+            <div>
+              <img src="src/assets/images/image2.webp" alt="image" />
+            </div>
+            <div>
+              <img src="src/assets/images/image1.webp" alt="image" />
+            </div>
+          </div>
+
+          <div class="tab-content explore__images" id="websites">
+            <div>
+              <img src="src/assets/images/image1.webp" alt="image" />
+            </div>
+            <div>
+              <img src="src/assets/images/image2.webp" alt="image" />
+            </div>
+            <div>
+              <img src="src/assets/images/image1.webp" alt="image" />
+            </div>
+          </div> -->
         </div>
       </section>
 
@@ -1566,5 +1594,21 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="main.js"></script>
+    <script>
+      const tabButtons = document.querySelectorAll(".tab__button");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const targetTab = button.getAttribute("data-tab");
+
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
+
+          button.classList.add("active");
+          document.getElementById(targetTab).classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>

@@ -77,7 +77,7 @@
 
 /* active/hover state */
 .tab__button:hover,
-.tab__button:active {
+.tab__button.active {
   font-weight: bold;
   background: linear-gradient(
     180deg,
