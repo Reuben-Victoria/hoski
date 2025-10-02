@@ -137,7 +137,6 @@
   display: flex;
   order: 0;
   flex: 1;
-  height: auto;
   max-width: 40.1875rem;
   flex-direction: column;
   gap: 2rem;
@@ -185,7 +184,6 @@
 .approach__list {
   display: flex;
   flex-direction: column;
-
   gap: 2rem;
 }
 
@@ -200,10 +198,12 @@
   background: linear-gradient(180deg, #0a0a0b 92.63%, rgba(0, 0, 0, 0) 100%);
 }
 
-
+.approach__list-clip{
+  overflow: hidden;
+  position: relative;
+}
 
 .approach__list-wrapper {
-  height: 0;
   overflow: visible;
   display: flex;
   flex-direction: column;

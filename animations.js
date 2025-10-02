@@ -12,39 +12,40 @@ export function initApproachAnimation(gsap) {
   if (isMobile) return;
 
   const wrapperHeight = wrapper.scrollHeight;
-
-  // Set up proper layering with solid background
   heading.style.position = "relative";
-  heading.style.background = "#0a0a0b"; 
+  heading.style.background = "#0a0a0b";
   heading.style.zIndex = 10;
   heading.style.paddingBottom = "32px";
-  
-  videoCard.style.position = "relative";
-  videoCard.style.zIndex = 10;
-  videoCard.style.background = "#0a0a0b";
-  videoCard.style.paddingTop = "16px";
-  
+
   wrapper.style.position = "relative";
   wrapper.style.zIndex = 1;
 
-  // Create synchronized animation
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: section,
-      start: "top top",
-      end: () => `+=${wrapperHeight}`,
-      scrub: true,
-      pin: true,
-    },
-  })
-  .to(wrapper, {
-    y: () => -(wrapperHeight - 200),
-    ease: "none",
-  }, 0)
-  .to(heading, {
-    y: () => (wrapperHeight * 0.3),
-    ease: "none",
-  }, 0)
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: () => `+=${wrapperHeight}`,
+        scrub: true,
+        pin: true,
+      },
+    })
+    .to(
+      wrapper,
+      {
+        y: () => -(wrapperHeight - 200),
+        ease: "none",
+      },
+      0
+    )
+    .to(
+      heading,
+      {
+        y: () => wrapperHeight * 0.3,
+        ease: "none",
+      },
+      0
+    );
 }
 export function initSwiper() {
   const swiper = new Swiper(".swiper", {
