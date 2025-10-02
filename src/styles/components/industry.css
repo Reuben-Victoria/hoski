@@ -2,10 +2,9 @@
   display: flex;
   width: 100%;
   flex-wrap: nowrap;
-  flex: 0 0 auto;
   justify-content: center;
-  overflow-x: auto;
   gap: 2rem;
+
   align-items: center;
   animation: marquee 12s linear infinite;
   will-change: transform;
@@ -29,6 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   justify-content: center;
   gap: 2.5rem;
 
@@ -976,9 +976,6 @@
     width: 100%;
     max-width: 50.5rem;
     margin-bottom: 1.125rem;
-  }
-  .industry__list {
-    overflow-x: auto;
   }
   .industry {
     padding: 1.5rem 0;
